@@ -18,6 +18,7 @@ CONTRIBUTING.md
 /.svn
 /.idea
 /.vscode
+/.github
 .gitattributes
 .npmrc
 
