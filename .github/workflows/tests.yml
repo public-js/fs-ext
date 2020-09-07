@@ -31,8 +31,8 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '12.x'
-      - uses: mattallty/jest-github-action@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: npm install
+      - uses: dkershner6/jest-coverage-commenter-action@v1
         with:
-          test-command: npx jest --ci --maxWorkers=3 --coverage --json --outputFile=jest.results.json
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          test_command: npm run test:ci
