@@ -5,6 +5,7 @@
   "scripts": {
     "build": "npm run clean && tsc",
     "clean": "rimraf dist",
+    "test:ci": "jest --ci --maxWorkers=3 --coverage --json --outputFile=jest.results.json",
     "test": "jest",
     "ts:watch": "tsc -w --preserveWatchOutput",
     "npm-pub:test": "npm publish --access public --dry-run",
