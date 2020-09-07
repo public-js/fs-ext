@@ -35,4 +35,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          test-command: npm run test:ci
+          test-command: npx jest --ci --maxWorkers=3 --coverage --json --outputFile=jest.results.json
