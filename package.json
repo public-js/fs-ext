@@ -1,0 +1,48 @@
+{
+  "name": "@public-js/fs-ext",
+  "version": "0.0.1",
+  "description": "Several useful methods for Node.js built-in fs",
+  "scripts": {
+    "build": "npm run clean && tsc",
+    "clean": "rimraf dist",
+    "test": "jest",
+    "ts:watch": "tsc -w --preserveWatchOutput",
+    "npm-pub:test": "npm publish --access public --dry-run",
+    "npm-pub": "npm publish --access public"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "devDependencies": {
+    "@types/jest": "^26.0.13",
+    "@types/node": "^14.6.0",
+    "@typescript-eslint/eslint-plugin": "^4.0.1",
+    "@typescript-eslint/parser": "^4.0.1",
+    "eslint": "^7.8.1",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-import-resolver-typescript": "^2.3.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-json": "^2.1.2",
+    "eslint-plugin-prettier": "^3.1.4",
+    "jest": "^26.4.2",
+    "prettier": "^2.1.1",
+    "rimraf": "^3.0.0",
+    "ts-jest": "^26.3.0",
+    "typescript": "^4.0.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "license": "MIT",
+  "author": "Public JS <public-js@muffin.blue> (https://github.com/public-js/public-js)",
+  "bugs": {
+    "url": "https://github.com/public-js/fs-ext/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/public-js/fs-ext.git"
+  },
+  "homepage": "https://github.com/public-js/fs-ext",
+  "engines": {
+    "node": ">=10.3.0"
+  }
+}
