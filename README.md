@@ -1,9 +1,9 @@
 # @public-js/fs-ext
 
-![CI](https://img.shields.io/github/workflow/status/public-js/fs-ext/CI?style=flat-square)
-![Downloads](https://img.shields.io/npm/dm/@public-js/fs-ext?style=flat-square)
-![Version](https://img.shields.io/npm/v/@public-js/fs-ext?style=flat-square)
-![License](https://img.shields.io/npm/l/@public-js/fs-ext?style=flat-square)
+[![CI](https://img.shields.io/github/workflow/status/public-js/fs-ext/CI?style=flat-square)](https://github.com/public-js/fs-ext/actions?query=workflow%3ACI)
+[![Downloads](https://img.shields.io/npm/dm/@public-js/fs-ext?style=flat-square)](https://www.npmjs.com/package/@public-js/fs-ext)
+[![Version](https://img.shields.io/npm/v/@public-js/fs-ext?style=flat-square)](https://www.npmjs.com/package/@public-js/fs-ext)
+[![License](https://img.shields.io/npm/l/@public-js/fs-ext?style=flat-square)](https://www.npmjs.com/package/@public-js/fs-ext)
 
 ---
 
