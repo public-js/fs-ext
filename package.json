@@ -8,8 +8,8 @@
     "test:ci": "jest --ci --maxWorkers=3 --coverage --json --outputFile=jest.results.json",
     "test": "jest",
     "ts:watch": "tsc -w --preserveWatchOutput",
-    "npm-pub:test": "npm publish --access public --dry-run",
-    "npm-pub": "npm publish --access public"
+    "npm-pub:test": "npm run build && npm publish --access public --dry-run",
+    "npm-pub": "npm run build && npm publish --access public"
   },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",

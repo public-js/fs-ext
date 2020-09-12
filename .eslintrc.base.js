@@ -26,7 +26,11 @@ module.exports = {
     },
     rules: {
         // 'import/no-extraneous-dependencies': [2, { 'devDependencies': ['**/test.ts'] }],
-        '@typescript-eslint/indent': ['warn', 4, { 'VariableDeclarator': 'first' }],
+        '@typescript-eslint/indent': ['warn', 4,
+            {
+                'VariableDeclarator': 'first',
+                'SwitchCase': 1,
+            }],
         'array-bracket-spacing': ['error', 'never'],
         'object-curly-spacing': ['error', 'always'],
         'quotes': ['error', 'single']

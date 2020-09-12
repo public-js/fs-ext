@@ -29,7 +29,7 @@ const fsExt = require('@public-js/fs-ext');
 
 #### forEachFile
 
-Iterates over all files inside the specified directory running callback for each file found.
+Iterates over all files inside the specified directory executing callback for each file found.
 
 Example:
 ```typescript

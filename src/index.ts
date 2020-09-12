@@ -27,6 +27,12 @@ function _forEachFile(
         });
     });
 }
+
+/**
+ * Iterates over all files inside the directory executing callback for each file found.
+ * @param dir A path to directory
+ * @param callback A callback function
+ */
 export function forEachFile(
     dir: string, callback: (err: Error | null, file?: string, stats?: fs.Stats) => void
 ): void {
@@ -51,6 +57,12 @@ function _fileExt(
         }
     });
 }
+
+/**
+ * Resolves file extension to callback.
+ * @param file A path to file
+ * @param callback A callback function
+ */
 export function fileExt(
     file: string, callback: (err: Error | null, ext?: string | null) => void
 ): void {
@@ -71,6 +83,11 @@ function _fileExtSync(file: string): string | null {
     }
     return null;
 }
+
+/**
+ * Resolves file extension.
+ * @param file A path to file
+ */
 export function fileExtSync(file: string): string | null {
     assert(file, assertErr.missPath);
     assert.strictEqual(typeof file, 'string', assertErr.pathNotStr);
@@ -86,6 +103,13 @@ function _isFileExt(
         return callback(null, _ext === ext);
     });
 }
+
+/**
+ * Resolves file extension and compares with given string to callback.
+ * @param file A path to file
+ * @param ext Extension to compare
+ * @param callback A callback function
+ */
 export function isFileExt(
     file: string, ext: string, callback: (err: Error | null, eq?: boolean) => void
 ): void {
@@ -100,6 +124,12 @@ export function isFileExt(
 function _isFileExtSync(file: string, ext: string | null): boolean {
     return _fileExtSync(file) === ext;
 }
+
+/**
+ * Resolves file extension and compares with given string.
+ * @param file A path to file
+ * @param ext Extension to compare
+ */
 export function isFileExtSync(file: string, ext: string | null): boolean {
     assert(file, assertErr.missPath);
     assert.strictEqual(typeof file, 'string', assertErr.pathNotStr);
