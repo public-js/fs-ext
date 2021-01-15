@@ -1,9 +1,10 @@
 # @public-js/fs-ext
 
-[![CI](https://img.shields.io/github/workflow/status/public-js/fs-ext/CI?style=flat-square)](https://github.com/public-js/fs-ext/actions?query=workflow%3ACI)
-[![Downloads](https://img.shields.io/npm/dm/@public-js/fs-ext?style=flat-square)](https://www.npmjs.com/package/@public-js/fs-ext)
-[![Version](https://img.shields.io/npm/v/@public-js/fs-ext?style=flat-square)](https://www.npmjs.com/package/@public-js/fs-ext)
-[![License](https://img.shields.io/npm/l/@public-js/fs-ext?style=flat-square)](https://www.npmjs.com/package/@public-js/fs-ext)
+[![CI](https://img.shields.io/github/workflow/status/public-js/fs-ext/CI?style=flat)](https://github.com/public-js/fs-ext/actions?query=workflow%3ACI)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/a8d1a29e28af410baa0cda2d19ae2458)](https://www.codacy.com/gh/public-js/fs-ext/dashboard)
+[![Maintainability](https://api.codeclimate.com/v1/badges/bc2384efff32e1c92d55/maintainability)](https://codeclimate.com/github/public-js/fs-ext/maintainability)
+[![Version](https://img.shields.io/npm/v/@public-js/fs-ext?style=flat)](https://www.npmjs.com/package/@public-js/fs-ext)
+[![License](https://img.shields.io/npm/l/@public-js/fs-ext?style=flat)](https://www.npmjs.com/package/@public-js/fs-ext)
 
 ---
 
