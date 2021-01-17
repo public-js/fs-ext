@@ -1,6 +1,6 @@
 {
   "name": "@public-js/fs-ext",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Several useful methods for Node.js built-in fs",
   "scripts": {
     "build": "npm run clean:dist && tsc",
