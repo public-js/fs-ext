@@ -1,11 +1,13 @@
 ## @public-js/fs-ext
 
 /src
+/tests
 .editorconfig
 .eslintignore
 .eslintrc.base.js
 .eslintrc.js
 .gitignore
+.mocharc.js
 .npmignore
 .prettierrc.js
 jest.config.js

@@ -3,8 +3,9 @@
   "compilerOptions": {
     "outDir": "./dist/",
     "types": [
-      "node",
-      "jest"
+      "chai",
+      "mocha",
+      "node"
     ]
   },
   "include": [
@@ -12,7 +13,6 @@
   ],
   "exclude": [
     "node_modules",
-    "src/**/*.test.ts",
-    "src/**/__tests__/*.ts"
+    "tests"
   ]
 }
