@@ -2,33 +2,48 @@ name: CI
 
 on:
   push:
-    branches: [ dev ]
+    branches: [ dev, main ]
   pull_request:
-    branches: [ dev ]
+    branches: [ dev, main ]
 
 jobs:
 
-  unit:
-    name: Unit tests
+  build:
+    name: Build project
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - name: Checkout commit
+        uses: actions/checkout@v2
+      - name: Setup Node
+        uses: actions/setup-node@v1
         with:
           node-version: '12.x'
       - run: npm install
-      - run: npm run test
+      - name: Build project
+        run: npm run build
 
-  coverage:
-    name: Jest coverage
+  mocha-coverage-report:
+    needs: [ build ]
+    name: Mocha coverage report
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - name: Checkout commit
+        uses: actions/checkout@v2
+      - name: Setup Node
+        uses: actions/setup-node@v1
         with:
           node-version: '12.x'
       - run: npm install
-      - uses: dkershner6/jest-coverage-commenter-action@v1
+      - name: Generate coverage
+        run: npm run cover:mocha
+      - name: Report to Codacy
+        uses: codacy/codacy-coverage-reporter-action@master
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          test_command: npm run test:ci
+          project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
+          coverage-reports: 'coverage/lcov.info'
+      - name: Report to Code Climate
+        uses: paambaati/codeclimate-action@v2.7.5
+        env:
+          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+        with:
+          coverageLocations: ${{ github.workspace }}/coverage/lcov.info:lcov
